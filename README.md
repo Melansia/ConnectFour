@@ -15,7 +15,8 @@ The following **required** Objectives are completed:
 ### Stage 1
 
 
-* [X] The program prints the program title ```Connect Four```, asks for the 1st player's name with the prompt ```First player's name:```, and read it.
+* [X] The program prints the program title ```Connect Four```, asks for the 1st player's name with the prompt 
+  ```First player's name:```, and read it.
   Then it asks for the 2nd player's name with the prompt ```Second player's name:``` and read it.
 
 
@@ -30,7 +31,8 @@ The following **required** Objectives are completed:
   If users press the Enter button right away (ignoring the dimension prompt), then the board size is 6 rows and 7 columns.
 
 
-* [X] If the number of rows is outside the 5-9 range, prints the following message ```Board rows should be from 5 to 9```
+* [X] If the number of rows is outside the 5-9 range, prints the following message 
+```Board rows should be from 5 to 9```
   and asks for dimensions once again.
 
 
