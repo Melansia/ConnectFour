@@ -14,6 +14,7 @@ The following **required** Objectives are completed:
 
 ### Stage 1
 
+
 * [X] The program prints the program title ```Connect Four```, asks for the 1st player's name with the prompt ```First player's name:```, and read it.
   Then it asks for the 2nd player's name with the prompt ```Second player's name:``` and read it.
 
@@ -36,7 +37,9 @@ The following **required** Objectives are completed:
 * [X] If the number of columns is outside the 5-9 range,
   prints the following message ```Board columns should be from 5 to 9``` and ask for dimensions once again.
 
+
 * [X] If users fail to input dimensions in the correct format, prints ```Invalid input``` and ask for dimensions once again.
+
 
 * [X] Finally, output the following message:
     ```
@@ -46,69 +49,59 @@ The following **required** Objectives are completed:
 
 ### Stage 2
 
-* [X] When the user inputs the command hide, the program prompt them for an input image filename with the message "Input image file:"
-  and an output image filename with the message "Output image file:".
-  These are used for reading the input image file and writing the output image file, respectively.
+
+* [ ] Draws the game board, constructing a board in the manner shown in the following example for a 7x8 board:
+  ```
+   1 2 3 4 5 6 7 8
+  | | | | | | | | |
+  | | | | | | | | |
+  | | | | | | | | |
+  | | | | | | | | |
+  | | | | | | | | |
+  | | | | | | | | |
+  | | | | | | | | |
+  =================
+  ```
+  The board size can vary, so the program is adapting to any possible size.
 
 
-* [X] After reading the filenames, the program prints the following messages:
-  Input Image: [input filename] and Output Image: [output filename].
+* [ ] Prints the column numbers on the board. Minding the spaces between characters.
 
-
-* [X] When the input image is read, the least significant bit for each color (Red, Green, and Blue) is set to 1.
-  The resulting image will be saved with the provided output image filename in the PNG format.
-
-
-* [X] A proper method is applied so that the I/O exceptions do not terminate the program.
-  In such cases, an exception message should be printed and the program should return to the command loop.
 
 ### Stage 3
 
-* [X] When the hide command is given, the program gets the input and output image filenames.
-  Then, it prompts the user for the secret message by printing "Message to hide:".
+* [ ] In the classic game players use red and yellow colored discs in the "hardware" version of the game. In this project, 
+I'm going to substitute them with ```o``` and ```*``` characters. The ```o``` is for the first player.
 
 
-* [X] The program is checking that the image size is adequate for holding the Bytes array.
-  If not, it prints an error message with the text "The input image is not large enough to hold this message."
-  and return to the menu.
+* [ ] Each player inputs a column number one after another. 
+The program reads the input and prints the appropriate character ( ```o``` or ```*```) 
+on the first available position at the bottom of that column. 
+If the user input isn't correct, prints the appropriate message and ask for a new one. 
+The program also check whether a column is full or not. 
+If it is, no more discs can be added to it.
 
 
-* [X] Each bit of this Bytes Array is saved at the position of the least significant bit of the blue color of each pixel,
-  The output image is saved in the PNG format.
+* [ ] Asks each player to input a column number by prompting ```<First player's name>'s turn:``` or ```<Second player's name>'s turn:```.
+  Reads the column number and prints ```o``` or ```*``` on the first available position of that column. The first player is ```o```;
+  the second player is ```*```.
 
 
-* [X] When the "show" command is given, the program asks for the image filename
-  (previously saved with the hidden message) by printing "Input image file:".
-  The image is opened and the Bytes Array is reconstructed bit by bit;
-  the program stops reading it when the bytes with the values 0, 0, 3 are encountered.
+* [ ] If players input end instead of a column number, the program terminates and prints the respective message.
 
 
-* [X] The last 3 bytes (values 0, 0, 3) are removed from the end of the Bytes Array.
-  Then, the message is restored as a String from the Bytes Array (or 00000000 00000000 00000011 bits).
-  The program then prints "Message:" and then the message itself on a new line.
+* [ ] If the input contains an integer number outside the scope of available columns, warns the players with the 
+```The column number is out of range (1 - <Max column number>)``` message and ask for it once again. If players' input doesn't contain an integer, 
+warn the players with ```Incorrect column number``` and ask for it once again.
+
 
 ### Stage 4
 
-* [X] When the hide command is given and the secret message is input,
-  the user is prompted for a password with the message "Password:".
+
+* [ ] Checks the board for the winning condition. If a player wins, outputs Player ```<Player's name>``` won.
 
 
-* [X] The program reads the password string and converts it to a Bytes Array.
-  The first message byte will be XOR encrypted using the first password byte,
-  the second message byte will be XOR encrypted with the second password byte, and so on.
-  If the password is shorter than the message, then after the last byte of the password,
-  the first byte of the password is used again.
+* [ ] If the board is full, but neither of the players has won, prints ```It is a draw```.
 
 
-* [X] Three Bytes with values 0, 0, 3 are added to the encrypted Bytes Array.
-  If the image size is adequate for holding the Bytes array, the result is hidden in the image like in the previous stage.
-
-
-* [X] When the show command is given and the filename is input,
-  the user is prompted for the password with the message "Password:".
-  The image is open and the encrypted Bytes Array are reconstructed ,
-  the program stops reading it when the bytes with the values 0, 0, 3 are found.
-  The last three bytes are removed and the encrypted Bytes Array are decrypted using the password.
-
-
-* [X] Finally, the message is restored to the String type, and the program prints "Message:" and then the message itself on a new line.
+* [ ] Regardless of whether it is a draw or somebody's victory, prints ```Game Over!``` and terminates the program.
