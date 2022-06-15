@@ -52,7 +52,7 @@ The following **required** Objectives are completed:
 ### Stage 2
 
 
-* [ ] Draws the game board, constructing a board in the manner shown in the following example for a 7x8 board:
+* [X] Draws the game board, constructing a board in the manner shown in the following example for a 7x8 board:
   ```
    1 2 3 4 5 6 7 8
   | | | | | | | | |
@@ -67,7 +67,7 @@ The following **required** Objectives are completed:
   The board size can vary, so the program is adapting to any possible size.
 
 
-* [ ] Prints the column numbers on the board. Minding the spaces between characters.
+* [X] Prints the column numbers on the board. Minding the spaces between characters.
 
 
 ### Stage 3
