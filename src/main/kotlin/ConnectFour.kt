@@ -1,4 +1,14 @@
 class ConnectFour() {
+
+    private val player1 = 'o'
+    private val player2 = '*'
+
+    private val rows = 6
+    private val cols = 7
+
+    private var board = makeTheBoard(rows, cols)
+
+
     fun start() {
         println("Connect Four")
         println("First player's name:")
@@ -6,10 +16,6 @@ class ConnectFour() {
         println("Second player's name:")
         val playerTwo = readln()
 
-        var rows = 6
-        var cols = 7
-
-        val board = Array(rows) { IntArray(cols) }
         val regCheck = "\\d+\\s*[Xx]\\s*\\d+".toRegex()
 
 
@@ -25,8 +31,9 @@ class ConnectFour() {
                     } else if (newRowsColsVal.last().digitToInt() !in 5..9) {
                         println("Board columns should be from 5 to 9")
                     } else {
-                        rows = newRowsColsVal.first().digitToInt()
-                        cols = newRowsColsVal.last().digitToInt()
+                        val newRows = newRowsColsVal.first().digitToInt()
+                        val newColumns = newRowsColsVal.last().digitToInt()
+                        board = makeTheBoard(newRows, newColumns)
                         break
                     }
                 }
@@ -38,5 +45,17 @@ class ConnectFour() {
 
         println("$playerOne VS $playerTwo")
         println("$rows X $cols board")
+        display(board)
+    }
+
+    private fun makeTheBoard(rows: Int, columns: Int): Array<Array<Char>> {
+        return Array(rows) { Array(columns) { ' ' } }
+    }
+
+    private fun display(l: Array<Array<Char>>) {
+        for (i in 1..l[0].size) print(if (i == l[0].size) " $i\n" else " $i")
+        for (i in 1..l.size) println("|${l[i - 1].joinToString("|")}|")
+        for (i in 0..l[0].size * 2) print("=")
+        println()
     }
 }
