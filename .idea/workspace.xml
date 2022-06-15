@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35a59d58-b0fc-40bf-b042-7cc158bda22d" name="Changes" comment="workspace.xml" />
+    <list default="true" id="35a59d58-b0fc-40bf-b042-7cc158bda22d" name="Changes" comment="README.md">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ConnectFour.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ConnectFour.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -37,13 +40,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/mmold/IdeaProjects/ConnectFour/src/main/kotlin"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mmold/IdeaProjects/ConnectFour/src/main/kotlin&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\mmold\IdeaProjects\ConnectFour\src\main\kotlin" />
@@ -52,6 +55,20 @@
       <recent name="C:\Users\mmold\IdeaProjects\ConnectFour\src\main\kotlin" />
       <recent name="C:\Users\mmold\IdeaProjects\ConnectFour\scr" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MainKt" />
+      <module name="ConnectFour" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Kotlin.MainKt" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -83,7 +100,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655207217684</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="workspace.xml">
+      <created>1655207828109</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1655207828109</updated>
+    </task>
+    <task id="LOCAL-00005" summary="README.md">
+      <created>1655207838075</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1655207838075</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -99,8 +130,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
-    <MESSAGE value="README.md" />
     <MESSAGE value="workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml" />
+    <MESSAGE value="README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="README.md" />
   </component>
 </project>
