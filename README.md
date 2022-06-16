@@ -72,11 +72,11 @@ The following **required** Objectives are completed:
 
 ### Stage 3
 
-* [ ] In the classic game players use red and yellow colored discs in the "hardware" version of the game. In this project, 
+* [X] In the classic game players use red and yellow colored discs in the "hardware" version of the game. In this project, 
 I'm going to substitute them with ```o``` and ```*``` characters. The ```o``` is for the first player.
 
 
-* [ ] Each player inputs a column number one after another. 
+* [X] Each player inputs a column number one after another. 
 The program reads the input and prints the appropriate character ( ```o``` or ```*```) 
 on the first available position at the bottom of that column. 
 If the user input isn't correct, prints the appropriate message and ask for a new one. 
@@ -84,15 +84,15 @@ The program also check whether a column is full or not.
 If it is, no more discs can be added to it.
 
 
-* [ ] Asks each player to input a column number by prompting ```<First player's name>'s turn:``` or ```<Second player's name>'s turn:```.
+* [X] Asks each player to input a column number by prompting ```<First player's name>'s turn:``` or ```<Second player's name>'s turn:```.
   Reads the column number and prints ```o``` or ```*``` on the first available position of that column. The first player is ```o```;
   the second player is ```*```.
 
 
-* [ ] If players input end instead of a column number, the program terminates and prints the respective message.
+* [X] If players input end instead of a column number, the program terminates and prints the respective message.
 
 
-* [ ] If the input contains an integer number outside the scope of available columns, warns the players with the 
+* [X] If the input contains an integer number outside the scope of available columns, warns the players with the 
 ```The column number is out of range (1 - <Max column number>)``` message and ask for it once again. If players' input doesn't contain an integer, 
 warn the players with ```Incorrect column number``` and ask for it once again.
 
