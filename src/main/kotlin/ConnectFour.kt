@@ -9,10 +9,10 @@ class ConnectFour() {
     private var playerOneMove = true
     private var playerTwoMove = false
 
-    private val defaultRows = 6
-    private val defaultColumns = 7
+    private val rows = 6
+    private val columns = 7
 
-    private var board = makeTheBoard(defaultRows, defaultColumns)
+    private var board = makeTheBoard(rows, columns)
     private val regCheck = "\\d+\\s*[Xx]\\s*\\d+".toRegex()
 
     fun start() {
@@ -54,7 +54,7 @@ class ConnectFour() {
         }
 
         println("$playerOneName VS $playerTwoName")
-        println("$defaultRows X $defaultColumns board")
+        println("$rows X $columns board")
     }
 
     private fun startGame() {
@@ -63,18 +63,26 @@ class ConnectFour() {
             while (playerOneMove) {
                 println("$playerOneName's turn:")
                 val playerOneMove = playerMove()
-                if (playerOneMove != "end") {
+                if (playerOneMove == "end") {
+                    println("Game Over!").also { return }
+                } else {
                     moveCheck(playerOneMove, player1)
-                } else println("Game Over!").also { return }
+                }
             }
+
+            if (drawCheck()) return
 
             while (playerTwoMove) {
                 println("$playerTwoName's turn:")
                 val playerTowMove = playerMove()
-                if (playerTowMove != "end") {
+                if (playerTowMove == "end") {
+                    println("Game Over!").also { return }
+                } else {
                     moveCheck(playerTowMove, player2)
-                } else println("Game Over!").also { return }
+                }
             }
+
+            if (drawCheck()) return
         }
     }
 
@@ -100,7 +108,7 @@ class ConnectFour() {
                 playerTwoMove = false
                 display(board)
             }
-        }catch (e: NumberFormatException) {
+        } catch (e: NumberFormatException) {
             println("Incorrect column number")
         } catch (e: ArrayIndexOutOfBoundsException) {
             println("The column number is out of range (1 - ${board[0].size})")
@@ -120,5 +128,13 @@ class ConnectFour() {
         for (i in 1..l.size) println("|${l[i - 1].joinToString("|")}|")
         for (i in 0..l[0].size * 2) print("=")
         println()
+    }
+
+    private fun drawCheck(): Boolean {
+        if (!board[0].contains(' ')) {
+            println("It is a draw")
+            println("Game Over!").also { return true }
+        }
+        return false
     }
 }
