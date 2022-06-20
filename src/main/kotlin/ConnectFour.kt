@@ -71,6 +71,7 @@ class ConnectFour() {
             }
 
             if (drawCheck()) return
+            if (winCheck()) return
 
             while (playerTwoMove) {
                 println("$playerTwoName's turn:")
@@ -83,6 +84,7 @@ class ConnectFour() {
             }
 
             if (drawCheck()) return
+            if (winCheck()) return
         }
     }
 
@@ -128,6 +130,58 @@ class ConnectFour() {
         for (i in 1..l.size) println("|${l[i - 1].joinToString("|")}|")
         for (i in 0..l[0].size * 2) print("=")
         println()
+    }
+
+    private fun winCheck(): Boolean {
+        for (row in board) {
+            val checked = row.joinToString("")
+            if (checker(checked)) return true
+        }
+        // Check columns for win
+        for (column in board.indices) {
+            var checked = ""
+            for (i in 0 until board[0].size) {
+                checked += board[i][column]
+            }
+            if (checker(checked)) return true
+        }
+        // Check diagonal win
+        for (column in 3 until board.size) {
+            for (i in board[0].size - 4 downTo 0) {
+                var checked = ""
+                for (k in 0..3) {
+                    checked += board[i + k][column - k]
+                }
+                if (checker(checked)) return true
+            }
+        }
+        for (column in board.size - 4 downTo 0) {
+            for (i in board[0].size - 4 downTo 0) {
+                var checked = ""
+                for (k in 0..3) {
+                    checked += board[i + k][column + k]
+                }
+                if (checker(checked)) return true
+            }
+        }
+        return false
+    }
+
+    private fun checker(str: String): Boolean {
+        val playerO = "oooo"
+        val playerX = "****"
+
+        if (str.contains(playerO)) {
+            println("Player $playerOneName won")
+            println("Game Over!").also { return true }
+        }
+
+        if (str.contains(playerX)) {
+            println("Player $playerTwoName won")
+            println("Game Over!").also { return true }
+        }
+
+        return false
     }
 
     private fun drawCheck(): Boolean {
