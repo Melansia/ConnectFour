@@ -1,4 +1,4 @@
-class ConnectFour() {
+class ConnectFour {
 
     private val player1 = 'o'
     private val player2 = '*'
@@ -133,21 +133,22 @@ class ConnectFour() {
     }
 
     private fun winCheck(): Boolean {
+
         for (row in board) {
             val checked = row.joinToString("")
             if (checker(checked)) return true
         }
         // Check columns for win
-        for (column in board.indices) {
+        for (column in 0 until board[0].size) {
             var checked = ""
-            for (i in 0 until board[0].size) {
+            for (i in 0 until board.size) {
                 checked += board[i][column]
             }
             if (checker(checked)) return true
         }
         // Check diagonal win
-        for (column in 3 until board.size) {
-            for (i in board[0].size - 4 downTo 0) {
+        for (column in 3 until board[0].size) {
+            for (i in board.size - 4 downTo 0) {
                 var checked = ""
                 for (k in 0..3) {
                     checked += board[i + k][column - k]
@@ -155,8 +156,8 @@ class ConnectFour() {
                 if (checker(checked)) return true
             }
         }
-        for (column in board.size - 4 downTo 0) {
-            for (i in board[0].size - 4 downTo 0) {
+        for (column in board[0].size - 4 downTo 0) {
+            for (i in board.size - 4 downTo 0) {
                 var checked = ""
                 for (k in 0..3) {
                     checked += board[i + k][column + k]
