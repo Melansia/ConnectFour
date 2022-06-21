@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35a59d58-b0fc-40bf-b042-7cc158bda22d" name="Changes" comment="workspace.xml">
+    <list default="true" id="35a59d58-b0fc-40bf-b042-7cc158bda22d" name="Changes" comment="multiple games">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/ConnectFour.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ConnectFour.kt" afterDir="false" />
     </list>
@@ -205,7 +205,28 @@
       <option name="project" value="LOCAL" />
       <updated>1655739006277</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="README.md">
+      <created>1655844292406</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1655844292406</updated>
+    </task>
+    <task id="LOCAL-00020" summary="bugfix">
+      <created>1655844303356</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1655844303356</updated>
+    </task>
+    <task id="LOCAL-00021" summary="workspace.xml">
+      <created>1655844317857</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1655844317857</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -222,10 +243,12 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init commit" />
     <MESSAGE value="ConnectFour.kt" />
-    <MESSAGE value="README.md" />
     <MESSAGE value="draw checking" />
     <MESSAGE value="win checking" />
+    <MESSAGE value="README.md" />
+    <MESSAGE value="bugfix" />
     <MESSAGE value="workspace.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml" />
+    <MESSAGE value="multiple games" />
+    <option name="LAST_COMMIT_MESSAGE" value="multiple games" />
   </component>
 </project>
