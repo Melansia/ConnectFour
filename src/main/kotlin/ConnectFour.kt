@@ -1,13 +1,22 @@
+import kotlin.jvm.internal.PropertyReference0Impl
+import kotlin.system.exitProcess
+
 class ConnectFour {
 
     private val player1 = 'o'
     private val player2 = '*'
+
+    private var player1Score = 0
+    private var player2Score = 0
 
     private lateinit var playerOneName: String
     private lateinit var playerTwoName: String
 
     private var playerOneMove = true
     private var playerTwoMove = false
+
+    private var numberOfGames = 1
+    private var gameCount = 0
 
     private val rows = 6
     private val columns = 7
@@ -17,17 +26,38 @@ class ConnectFour {
 
     fun start() {
 
-        prepareGame()
-        display(board)
-        startGame()
+        getPlayerName()
+        boardSetting()
+        nrOfGame()
+
+        gamePrepare()
+
+        if (numberOfGames > 1) {
+            println("Total $numberOfGames games")
+            while (numberOfGames != gameCount) {
+                println("Game #${gameCount + 1}")
+                board = makeTheBoard(rows, columns)
+                display(board)
+                startGame()
+                score()
+            }
+        }else{
+            display(board)
+            startGame()
+        }
+        println("Game over!")
+
     }
 
-    private fun prepareGame() {
+    private fun getPlayerName() {
         println("Connect Four")
         println("First player's name:")
         playerOneName = readln()
         println("Second player's name:")
         playerTwoName = readln()
+    }
+
+    private fun boardSetting() {
 
         while (true) {
             println("Set the board dimensions (Rows x Columns)")
@@ -52,19 +82,41 @@ class ConnectFour {
                 }
             }
         }
+    }
 
+    private fun nrOfGame() {
+        while (true) {
+            println("Do you want to play single or multiple games?")
+            println("For a single game, input 1 or press Enter")
+            println("Input a number of games:")
+            val input = readln()
+            if (input.isEmpty()) return
+            try {
+                if (input.toInt() <= 0) {
+                    println("Invalid input")
+                } else {
+                    numberOfGames = input.toInt()
+                    return
+                }
+            } catch (e: Exception) {
+                println("Invalid input")
+            }
+        }
+    }
+
+    private fun gamePrepare() {
         println("$playerOneName VS $playerTwoName")
         println("$rows X $columns board")
+        if (numberOfGames == 1) println("Single game")
     }
 
     private fun startGame() {
         while (true) {
-
             while (playerOneMove) {
                 println("$playerOneName's turn:")
                 val playerOneMove = playerMove()
                 if (playerOneMove == "end") {
-                    println("Game Over!").also { return }
+                    println("Game Over!").also { exitProcess(0) }
                 } else {
                     moveCheck(playerOneMove, player1)
                 }
@@ -77,7 +129,7 @@ class ConnectFour {
                 println("$playerTwoName's turn:")
                 val playerTowMove = playerMove()
                 if (playerTowMove == "end") {
-                    println("Game Over!").also { return }
+                    println("Game Over!").also { exitProcess(0) }
                 } else {
                     moveCheck(playerTowMove, player2)
                 }
@@ -115,6 +167,11 @@ class ConnectFour {
         } catch (e: ArrayIndexOutOfBoundsException) {
             println("The column number is out of range (1 - ${board[0].size})")
         }
+    }
+
+    private fun score() {
+        println("Score")
+        println("$playerOneName: $player1Score $playerTwoName: $player2Score")
     }
 
     private fun playerMove(): String {
@@ -174,12 +231,18 @@ class ConnectFour {
 
         if (str.contains(playerO)) {
             println("Player $playerOneName won")
-            println("Game Over!").also { return true }
+            if (numberOfGames == 1) println("Game Over!").also { return true }
+            player1Score += 2
+            gameCount++
+            return true
         }
 
         if (str.contains(playerX)) {
             println("Player $playerTwoName won")
-            println("Game Over!").also { return true }
+            if (gameCount == 1) println("Game Over!").also { return true }
+            player2Score += 2
+            gameCount++
+            return true
         }
 
         return false
@@ -188,7 +251,11 @@ class ConnectFour {
     private fun drawCheck(): Boolean {
         if (!board[0].contains(' ')) {
             println("It is a draw")
-            println("Game Over!").also { return true }
+            if (numberOfGames == 1) println("Game Over!").also { return true }
+            player1Score++
+            player2Score++
+            gameCount++
+            return true
         }
         return false
     }
