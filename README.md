@@ -100,13 +100,13 @@ warn the players with ```Incorrect column number``` and ask for it once again.
 ### Stage 4
 
 
-* [ ] Checks the board for the winning condition. If a player wins, outputs Player ```<Player's name>``` won.
+* [X] Checks the board for the winning condition. If a player wins, outputs Player ```<Player's name>``` won.
 
 
-* [ ] If the board is full, but neither of the players has won, prints ```It is a draw```.
+* [X] If the board is full, but neither of the players has won, prints ```It is a draw```.
 
 
-* [ ] Regardless of whether it is a draw or somebody's victory, prints ```Game Over!``` and terminates the program.
+* [X] Regardless of whether it is a draw or somebody's victory, prints ```Game Over!``` and terminates the program.
 
 
 ### Stage 5
