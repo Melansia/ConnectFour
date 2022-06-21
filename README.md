@@ -112,7 +112,7 @@ warn the players with ```Incorrect column number``` and ask for it once again.
 ### Stage 5
 
 
-* [ ] After setting the board dimensions, players seeing the following:
+* [X] After setting the board dimensions, players seeing the following:
   ```
   Do you want to play single or multiple games?
   For a single game, input 1 or press Enter
@@ -122,7 +122,7 @@ warn the players with ```Incorrect column number``` and ask for it once again.
   prints ```Invalid input``` and asks for another try.
 
 
-* [ ] If players input is 1 or press Enter, a single game starts with the following message:
+* [X] If players input is 1 or press Enter, a single game starts with the following message:
 
   ```
   <1st player's name> VS <2nd player's name>
@@ -132,7 +132,7 @@ warn the players with ```Incorrect column number``` and ask for it once again.
   In this case, the gameplay remains the same.
 
 
-* [ ] Prints the score after each finished game in the following format:
+* [X] Prints the score after each finished game in the following format:
 
   ```
   Score
@@ -140,6 +140,6 @@ warn the players with ```Incorrect column number``` and ask for it once again.
   ```
   
 
-* [ ] Before the start of a game, prints the game number: ```Game #<Number of game>```.
+* [X] Before the start of a game, prints the game number: ```Game #<Number of game>```.
 Players take turns for the first move, and each player keeps the same disc symbol throughout all games.
 At any point of the game, if players input ```end```, the program outputs ```Game over!``` and terminate the game.
