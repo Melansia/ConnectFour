@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35a59d58-b0fc-40bf-b042-7cc158bda22d" name="Changes" comment="multiple games">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ConnectFour.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ConnectFour.kt" afterDir="false" />
-    </list>
+    <list default="true" id="35a59d58-b0fc-40bf-b042-7cc158bda22d" name="Changes" comment="README.md" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -226,7 +223,28 @@
       <option name="project" value="LOCAL" />
       <updated>1655844317857</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="multiple games">
+      <created>1655845219136</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1655845219136</updated>
+    </task>
+    <task id="LOCAL-00023" summary="workspace.xml">
+      <created>1655845230143</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1655845230143</updated>
+    </task>
+    <task id="LOCAL-00024" summary="README.md">
+      <created>1655845306543</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1655845306543</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -245,10 +263,10 @@
     <MESSAGE value="ConnectFour.kt" />
     <MESSAGE value="draw checking" />
     <MESSAGE value="win checking" />
-    <MESSAGE value="README.md" />
     <MESSAGE value="bugfix" />
-    <MESSAGE value="workspace.xml" />
     <MESSAGE value="multiple games" />
-    <option name="LAST_COMMIT_MESSAGE" value="multiple games" />
+    <MESSAGE value="workspace.xml" />
+    <MESSAGE value="README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="README.md" />
   </component>
 </project>
