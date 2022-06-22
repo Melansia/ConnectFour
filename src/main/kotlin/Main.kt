@@ -1,4 +1,3 @@
-
 fun main() {
     ConnectFour().start()
 }
