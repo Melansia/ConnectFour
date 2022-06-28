@@ -1,4 +1,3 @@
-import kotlin.jvm.internal.PropertyReference0Impl
 import kotlin.system.exitProcess
 
 class ConnectFour {
@@ -18,8 +17,8 @@ class ConnectFour {
     private var numberOfGames = 1
     private var gameCount = 0
 
-    private val rows = 6
-    private val columns = 7
+    private var rows = 6
+    private var columns = 7
 
     private var board = makeTheBoard(rows, columns)
     private val regCheck = "\\d+\\s*[Xx]\\s*\\d+".toRegex()
@@ -41,7 +40,7 @@ class ConnectFour {
                 startGame()
                 score()
             }
-        }else{
+        } else {
             display(board)
             startGame()
         }
@@ -73,8 +72,8 @@ class ConnectFour {
                     } else if (newColumns !in 5..9) {
                         println("Board columns should be from 5 to 9")
                     } else {
-//                        val newRows = newRowsColsVal.first().digitToInt()
-//                        val newColumns = newRowsColsVal.last().digitToInt()
+                        rows = newRows
+                        columns = newColumns
                         board = makeTheBoard(newRows, newColumns)
                         break
                     }
@@ -234,7 +233,7 @@ class ConnectFour {
 
         if (str.contains(playerO)) {
             println("Player $playerOneName won")
-            if (numberOfGames == 1) println("Game Over!").also { return true }
+            if (numberOfGames == 1) return true
             player1Score += 2
             gameCount++
             return true
@@ -242,7 +241,7 @@ class ConnectFour {
 
         if (str.contains(playerX)) {
             println("Player $playerTwoName won")
-            if (gameCount == 1) println("Game Over!").also { return true }
+            if (gameCount == 1) return true
             player2Score += 2
             gameCount++
             return true
@@ -254,7 +253,7 @@ class ConnectFour {
     private fun drawCheck(): Boolean {
         if (!board[0].contains(' ')) {
             println("It is a draw")
-            if (numberOfGames == 1) println("Game Over!").also { return true }
+            if (numberOfGames == 1) return true
             player1Score++
             player2Score++
             gameCount++
