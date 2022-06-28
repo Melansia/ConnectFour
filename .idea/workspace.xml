@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35a59d58-b0fc-40bf-b042-7cc158bda22d" name="Changes" comment="README.md" />
+    <list default="true" id="35a59d58-b0fc-40bf-b042-7cc158bda22d" name="Changes" comment="work on readability" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -244,7 +244,28 @@
       <option name="project" value="LOCAL" />
       <updated>1655845306543</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="workspace.xml">
+      <created>1655921959369</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1655921959369</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Main.kt">
+      <created>1655921971135</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1655921971135</updated>
+    </task>
+    <task id="LOCAL-00027" summary="work on readability">
+      <created>1655922017031</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1655922017031</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -265,8 +286,10 @@
     <MESSAGE value="win checking" />
     <MESSAGE value="bugfix" />
     <MESSAGE value="multiple games" />
-    <MESSAGE value="workspace.xml" />
     <MESSAGE value="README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="README.md" />
+    <MESSAGE value="workspace.xml" />
+    <MESSAGE value="Main.kt" />
+    <MESSAGE value="work on readability" />
+    <option name="LAST_COMMIT_MESSAGE" value="work on readability" />
   </component>
 </project>
