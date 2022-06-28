@@ -66,13 +66,15 @@ class ConnectFour {
             when {
                 newRowsColsVal.isEmpty() -> break
                 newRowsColsVal.matches(regCheck) -> {
-                    if (newRowsColsVal.first().digitToInt() !in 5..9) {
+                    val newRows = newRowsColsVal.first().digitToInt()
+                    val newColumns = newRowsColsVal.last().digitToInt()
+                    if (newRows !in 5..9) {
                         println("Board rows should be from 5 to 9")
-                    } else if (newRowsColsVal.last().digitToInt() !in 5..9) {
+                    } else if (newColumns !in 5..9) {
                         println("Board columns should be from 5 to 9")
                     } else {
-                        val newRows = newRowsColsVal.first().digitToInt()
-                        val newColumns = newRowsColsVal.last().digitToInt()
+//                        val newRows = newRowsColsVal.first().digitToInt()
+//                        val newColumns = newRowsColsVal.last().digitToInt()
                         board = makeTheBoard(newRows, newColumns)
                         break
                     }
@@ -143,6 +145,7 @@ class ConnectFour {
     private fun moveCheck(playerMove: String, player: Char) {
         val column = playerMove.toInt()
         var lastRow = board.lastIndex
+        // check if the column is full, if not register the move
         try {
             while (board[lastRow][column - 1] != ' ') {
                 if (lastRow == 0) {
