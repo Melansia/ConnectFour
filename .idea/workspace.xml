@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="35a59d58-b0fc-40bf-b042-7cc158bda22d" name="Changes" comment="work on readability" />
+    <list default="true" id="35a59d58-b0fc-40bf-b042-7cc158bda22d" name="Changes" comment="workspace.xml">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/ConnectFour.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/ConnectFour.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -265,7 +268,21 @@
       <option name="project" value="LOCAL" />
       <updated>1655922017031</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="work on readability">
+      <created>1656413171264</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1656413171264</updated>
+    </task>
+    <task id="LOCAL-00029" summary="workspace.xml">
+      <created>1656413183054</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1656413183054</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -287,9 +304,9 @@
     <MESSAGE value="bugfix" />
     <MESSAGE value="multiple games" />
     <MESSAGE value="README.md" />
-    <MESSAGE value="workspace.xml" />
     <MESSAGE value="Main.kt" />
     <MESSAGE value="work on readability" />
-    <option name="LAST_COMMIT_MESSAGE" value="work on readability" />
+    <MESSAGE value="workspace.xml" />
+    <option name="LAST_COMMIT_MESSAGE" value="workspace.xml" />
   </component>
 </project>
