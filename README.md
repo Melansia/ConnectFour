@@ -143,3 +143,12 @@ warn the players with ```Incorrect column number``` and ask for it once again.
 * [X] Before the start of a game, prints the game number: ```Game #<Number of game>```.
 Players take turns for the first move, and each player keeps the same disc symbol throughout all games.
 At any point of the game, if players input ```end```, the program outputs ```Game over!``` and terminate the game.
+
+
+## Video Walk-through
+
+Here's a walk-through of implemented features:
+
+<img src="https://media.giphy.com/media/b3JtGldoCImcz4BIDq/giphy.gif">
+
+GIF created with [Giphy](https://giphy.com).
